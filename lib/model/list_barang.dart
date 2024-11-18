@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class NamaBarang {
   String name;
   String harga;
@@ -5,9 +7,8 @@ class NamaBarang {
   String diskon;
   String stok;
   String pengiriman;
-  String spesifikasi;
+  final Color color;
   String imageAsset;
-  List<String> imageUrls;
 
   NamaBarang({
     required this.name,
@@ -16,91 +17,103 @@ class NamaBarang {
     required this.diskon,
     required this.stok,
     required this.pengiriman,
-    required this.spesifikasi,
+    required this.color,
     required this.imageAsset,
-    required this.imageUrls,
   });
 }
 
-var namaBarangList = [
+List<NamaBarang> namaBarangList = [
   NamaBarang(
-    name: 'Speaker Bluetooth Wireless JBL Clip 4',
+    name: 'Tas Wanita Biru Metalik 708',
     harga: '974.300',
-    description:
-        'Fitur dan Manfaat Suara Pro Asli JBL yang Kaya. JBL Pro Sound menghadirkan audio yang sangat kaya dan bass yang kuat dari ukuran Clip 4 yang ringkas.',
+    description: dummyText,
     diskon: '50',
     stok: '20',
     pengiriman: 'COD',
-    spesifikasi: 'https://jblstore.co.id/product/jbl-clip-4/',
-    imageAsset: 'images/sendal.png',
-    imageUrls: [
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_ls20nwhun-100x100.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_kh3vn7odr-100x100.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_zjw4tux10-100x100.jpg'
-    ],
+    color: const Color(0xFF3D82AE),
+    imageAsset: 'images/bag_1.png',
   ),
   NamaBarang(
-    name: 'JBL GO 2',
+    name: 'Tas Wanita Coklat Simple 504',
     harga: '349.500',
-    description:
-        'Fitur dan Manfaat Suara Pro Asli JBL yang Kaya. JBL Pro Sound menghadirkan audio yang sangat kaya dan bass yang kuat dari ukuran Clip 4 yang ringkas.',
+    description: dummyText,
     diskon: '-50',
     stok: '20',
     pengiriman: 'COD',
-    spesifikasi: 'https://jblstore.co.id/product/jbl-go-2/',
-    imageAsset: 'images/sendal_2.png',
-    imageUrls: [
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL_Go2_Detailshot01_Midnight_Black-1605x1605px.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL_Go2_Back_Midnight_Black-1605x1605px.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL_Go2_Detailshot02_Midnight_Black-1605x1605px.jpg'
-    ],
+    color: const Color(0xFFD3A984),
+    imageAsset: 'images/bag_2.png',
   ),
   NamaBarang(
-    name: 'JBL Quantum 100',
+    name: 'Tas Wanita Hitam 873',
     harga: '562.000',
-    description:
-        'Fitur dan Manfaat Suara Pro Asli JBL yang Kaya. JBL Pro Sound menghadirkan audio yang sangat kaya dan bass yang kuat dari ukuran Clip 4 yang ringkas.',
+    description: dummyText,
     diskon: '-50',
     stok: '20',
     pengiriman: 'COD',
-    spesifikasi: 'https://jblstore.co.id/product/jbl-quantum-100/',
-    imageAsset: 'images/Tas.png',
-    imageUrls: [
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Quantum2520100_Black_mhln7ty3j.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Quantum2520100_Black_yjh4t76lp-855x855.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Quantum2520100_Black_o1fuggrlr.jpg'
-    ],
+    color: const Color(0xFF989493),
+    imageAsset: 'images/bag_3.png',
   ),
   NamaBarang(
-    name: 'Speaker Bluetooth Wireless JBL Clip 4',
+    name: 'Tas Wanita Coklat Berlian 342',
     harga: '974.300',
-    description:
-        'Fitur dan Manfaat Suara Pro Asli JBL yang Kaya. JBL Pro Sound menghadirkan audio yang sangat kaya dan bass yang kuat dari ukuran Clip 4 yang ringkas.',
+    description: dummyText,
     diskon: '50',
     stok: '20',
     pengiriman: 'COD',
-    spesifikasi: 'https://jblstore.co.id/product/jbl-clip-4/',
-    imageAsset: 'images/jam.png',
-    imageUrls: [
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_ls20nwhun-100x100.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_kh3vn7odr-100x100.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_zjw4tux10-100x100.jpg'
-    ],
+    color: const Color(0xFFE6B398),
+    imageAsset: 'images/bag_4.png',
   ),
   NamaBarang(
-    name: 'Speaker Bluetooth Wireless JBL Clip 4',
+    name: 'Tas Wanita Merah Mawar Metalik 703',
     harga: '974.300',
-    description:
-        'Fitur dan Manfaat Suara Pro Asli JBL yang Kaya. JBL Pro Sound menghadirkan audio yang sangat kaya dan bass yang kuat dari ukuran Clip 4 yang ringkas.',
+    description: dummyText,
     diskon: '50',
     stok: '20',
     pengiriman: 'COD',
-    spesifikasi: 'https://jblstore.co.id/product/jbl-clip-4/',
-    imageAsset: 'images/tas_cewe.png',
-    imageUrls: [
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_ls20nwhun-100x100.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_kh3vn7odr-100x100.jpg',
-      'https://jblstore.co.id/wp-content/uploads/2024/02/JBL2520Clip25204_Red_zjw4tux10-100x100.jpg'
-    ],
+    color: const Color(0xFFFB7883),
+    imageAsset: 'images/bag_5.png',
+  ),
+  NamaBarang(
+    name: 'Tas Laptop Hitam Slempang Pro 990',
+    harga: '974.300',
+    description: dummyText,
+    diskon: '50',
+    stok: '20',
+    pengiriman: 'COD',
+    color: const Color(0xFFAEAEAE),
+    imageAsset: 'images/bag_6.png',
+  ),
+  NamaBarang(
+    name: 'Tas Laptop Hitam Slempang Slim 980',
+    harga: '974.300',
+    description: dummyText,
+    diskon: '50',
+    stok: '20',
+    pengiriman: 'COD',
+    color: const Color.fromARGB(255, 100, 96, 96),
+    imageAsset: 'images/bag_7.png',
+  ),
+  NamaBarang(
+    name: 'Tas Wanita Hitam Manik Kulit 760',
+    harga: '974.300',
+    description: dummyText,
+    diskon: '50',
+    stok: '20',
+    pengiriman: 'COD',
+    color: const Color.fromARGB(255, 152, 132, 132),
+    imageAsset: 'images/bag_8.png',
+  ),
+  NamaBarang(
+    name: 'Tas Wanita Pink Cantik 160',
+    harga: '974.300',
+    description: dummyText,
+    diskon: '50',
+    stok: '20',
+    pengiriman: 'COD',
+    color: const Color.fromARGB(255, 244, 45, 168),
+    imageAsset: 'images/bag_9.png',
   ),
 ];
+
+String dummyText =
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";

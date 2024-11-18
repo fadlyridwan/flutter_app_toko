@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_toko/cart_screen.dart';
 import 'package:flutter_app_toko/widgets/home_app_bar.dart';
 import 'package:flutter_app_toko/widgets/item_widget.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,9 +11,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const HomeAppBar(),
       body: ListView(
         children: [
-          const HomeAppBar(),
           Container(
             // height: 500,
             padding: const EdgeInsets.only(top: 15),
@@ -24,7 +27,8 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 15),
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   height: 50,
                   decoration: BoxDecoration(
@@ -53,25 +57,52 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  margin:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                  child: const Text(
-                    "Best Selling",
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 215, 112, 235),
-                    ),
-                  ),
-                ),
                 const ItemWidget(
                     // gridCount: 3,
                     ),
               ],
             ),
           ),
+        ],
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        onTap: (index) {
+          if (index == 0) {
+            print("tapped on calls");
+          }
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return const CartScreen();
+                },
+              ),
+            );
+          }
+          if (index == 2) {
+            print("tapped on chats");
+          }
+        },
+        height: 70,
+        color: const Color.fromARGB(255, 34, 227, 237),
+        items: const [
+          Icon(
+            Icons.home,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            CupertinoIcons.cart_fill,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.list,
+            size: 30,
+            color: Colors.white,
+          )
         ],
       ),
     );

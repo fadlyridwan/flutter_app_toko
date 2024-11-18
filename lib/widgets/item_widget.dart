@@ -12,22 +12,22 @@ class ItemWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(0.5),
       child: GridView.count(
-        childAspectRatio: 0.65,
+        childAspectRatio: 0.62,
         physics: const NeverScrollableScrollPhysics(),
         crossAxisCount: 2,
         shrinkWrap: true,
         children: namaBarangList.map((items) {
           return InkWell(
-            // onTap: () {
-            //   Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //       builder: (context) {
-            //         return DetailScreen(Items: items);
-            //       },
-            //     ),
-            //   );
-            // },
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetailScreen(items: items);
+                  },
+                ),
+              );
+            },
             child: Container(
               padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
               margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -43,10 +43,10 @@ class ItemWidget extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 215, 112, 235),
+                          color: const Color.fromARGB(255, 34, 227, 237),
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Text(
+                        child: const Text(
                           '50%',
                           style: TextStyle(
                             fontSize: 14,
@@ -88,12 +88,12 @@ class ItemWidget extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 215, 112, 235),
+                          color: const Color.fromARGB(255, 34, 227, 237),
                           borderRadius: BorderRadius.circular(5),
                         ),
                         child: Text(
                           items.pengiriman,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 10,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -103,11 +103,11 @@ class ItemWidget extends StatelessWidget {
                     ],
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'Rp.',
                           style: TextStyle(
                               fontSize: 16,
@@ -116,12 +116,12 @@ class ItemWidget extends StatelessWidget {
                         ),
                         Text(
                           items.harga,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 16,
                               color: Color(0xFF4C53A5),
                               fontWeight: FontWeight.bold),
                         ),
-                        Text(
+                        const Text(
                           ',-',
                           style: TextStyle(
                               fontSize: 16,

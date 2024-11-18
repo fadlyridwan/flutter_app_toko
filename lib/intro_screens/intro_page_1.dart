@@ -5,39 +5,42 @@ class IntroPage1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset('images/online_shop_1.png'),
-        const SizedBox(
-          height: 10,
-        ),
-        const Text(
-          "Mitra Setia Belanja Anda",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 25,
-            fontWeight: FontWeight.w400,
-            fontFamily: 'Oxygen',
+    return SingleChildScrollView(
+      padding: const EdgeInsets.only(top: 130.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('images/online_shop_1.png'),
+          const SizedBox(
+            height: 10,
           ),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Text(
-            "Salah satu kepastian yang membuat nyaman pelanggan, kami berani memberikan garansi 3 tahun, untuk produk elektronik yang kami jual!",
+          const Text(
+            "Mitra Setia Belanja Anda",
             style: TextStyle(
-              color: Colors.black.withOpacity(0.6),
-              fontSize: 16,
-              fontWeight: FontWeight.w300,
-              fontFamily: 'Staatliches',
+              color: Colors.black,
+              fontSize: 25,
+              fontWeight: FontWeight.w400,
+              fontFamily: 'Oxygen',
             ),
-            textAlign: TextAlign.center,
           ),
-        )
-      ],
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              "Salah satu kepastian yang membuat nyaman pelanggan, kami berani memberikan garansi 3 tahun, untuk produk elektronik yang kami jual!",
+              style: TextStyle(
+                color: Colors.black.withOpacity(0.6),
+                fontSize: 16,
+                fontWeight: FontWeight.w300,
+                fontFamily: 'Staatliches',
+              ),
+              textAlign: TextAlign.center,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
